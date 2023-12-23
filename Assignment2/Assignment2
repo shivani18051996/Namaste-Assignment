@@ -1,0 +1,19 @@
+
+- What is `NPM`?
+
+ npm is the default package manager for Node.js, facilitating the installation, sharing, and management of JavaScript packages.
+
+Usage:
+
+Installation: npm install <package-name>
+Dependency Management: Tracks and installs project dependencies listed in the package.json file.
+CLI Commands: npm init creates a package.json file, npm publish shares packages, npm update updates dependencies.
+package.json:
+
+Definition: package.json is a metadata file storing project details, dependencies, and configuration.
+Usage: Lists project information, dependencies, and entry points.
+Registry:
+
+Definition: npm has a centralized registry for public JavaScript packages.
+Role: Acts as a repository for publishing, discovering, and sharing code.
+

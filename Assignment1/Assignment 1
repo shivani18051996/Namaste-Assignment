@@ -1,0 +1,165 @@
+● What is Emmet?
+Emmet is a free plugin for text editors that allows users to type shortcuts that expand
+into full pieces of code. It's a developer tool kit that helps make work
+faster and improves HTML and CSS workflows.
+
+● Difference between a Library and Framework?
+
+     Framework: A framework is a  structure intended to serve as a support or guide for the building of something that expands the structure into something useful.
+
+Tools: Its a program which helps to develop a application or maintain the application or other programs.
+Libraries: Its a collection of stored information used often for developing software .
+
+● What is CDN? Why do we use it?
+
+a Content Delivery Network (CDN) is a network of servers located worldwide that helps deliver web content faster and more efficiently to users. Here's why we use CDNs:
+
+Faster Loading Times:
+
+CDNs reduce the time it takes for web pages and content to load by delivering them from servers closest to the user.
+Improved Performance:
+
+By distributing content strategically, CDNs optimize performance, ensuring a smoother and faster user experience.
+Load Balancing:
+
+CDNs balance the load across servers, preventing one server from becoming overloaded and maintaining consistent performance.
+Caching:
+
+CDNs store copies of static content, reducing the need to fetch data from the original server and speeding up access.
+Security:
+
+CDNs provide security features to protect websites from threats like DDoS attacks, enhancing overall safety.
+Scalability:
+
+CDNs allow websites to handle increased traffic without major infrastructure changes, providing scalability as needed.
+Cost Efficiency:
+
+CDNs reduce bandwidth costs by optimizing data delivery and offloading traffic from the origin server.
+In essence, CDNs make websites faster, more reliable, and secure while also being cost-effective.
+
+● Why is React known as React?
+
+Reacts quickly to changes in data, updating only what needs to be updated.
+Builds UIs from pieces that can "react" to changes on their own.
+Makes web apps fast and flexible by adapting to new needs.
+
+
+
+What is crossorigin in script tag?
+
+Here's a simple explanation of crossorigin in script tags:
+
+Imagine websites as houses:
+
+Each website has its own "address" called a "domain."
+Normally, websites can only use resources (like scripts) from their own "house" or domain.
+But sometimes, websites want to use resources from other "houses":
+
+Think of a website borrowing a script from a neighbor's house.
+That's called a "cross-origin request."
+The crossorigin attribute is like a permission slip:
+
+It tells the browser it's okay to load a script from a different "house."
+It helps ensure the script is safe and won't cause problems.
+Here's how it works:
+
+Website adds a script tag with crossorigin:
+
+HTML
+<script src="https://other-website.com/script.js" crossorigin="anonymous"></script>
+Use code with caution. Learn more
+Browser asks other website for permission:
+"Hey, can I borrow your script?"
+
+Other website checks for CORS headers:
+(CORS = Cross-Origin Resource Sharing)
+
+If headers say "yes," browser gets the script.
+If headers say "no," browser blocks it for safety.
+Types of crossorigin values:
+
+anonymous (most common):
+Browser won't send sensitive user info (like cookies) with the request.
+Good for privacy and security.
+use-credentials:
+Browser will send cookies and other credentials.
+Use with caution, only if the other website is trusted.
+Key point:
+
+crossorigin helps manage cross-origin requests safely.
+It's like a security checkpoint for scripts from different "houses."
+
+
+
+What is diference between React and ReactDOM
+React:
+
+React is the core library for building user interfaces in a declarative and component-based way.
+It provides the foundation for creating components, managing component state, and handling the rendering of UI elements.
+ReactDOM:
+
+ReactDOM is a specific package that provides DOM-specific methods for rendering React components.
+It acts as the bridge between the React virtual DOM (the in-memory representation of the UI) and the actual DOM in the browser.
+ReactDOM is used to render React components into the HTML document, update the DOM in response to changes in the component state, and handle events.
+
+
+What is difference between react.development.js and react.production.js files via CDN?
+
+Purpose:
+
+react.development.js: Intended for development and debugging.
+react.production.js: Optimized for performance in live production environments.
+File Size:
+
+react.development.js: Larger due to extra code for debugging and warnings.
+react.production.js: Smaller due to minification and removal of unnecessary code.
+Content:
+
+react.development.js: Includes comments, warnings, and helpful error messages.
+react.production.js: Stripped of non-essential code and comments for efficiency.
+Performance:
+
+react.development.js: May be slightly slower due to extra code and checks.
+react.production.js: Optimized for faster loading and execution in browsers.
+Debugging:
+
+react.development.js: Easier to debug due to helpful error messages and warnings.
+react.production.js: Debugging can be more challenging due to minification.
+Key Points:
+
+Development: Use react.development.js during development for debugging and clarity.
+Production: Use react.production.js in live environments for optimal performance and smaller file size.
+
+
+
+What is async and defer?
+
+In web development, async and defer are attributes you can add to <script> tags to improve page loading speed and performance. However, they have subtle differences in how they work:
+
+Both:
+
+Non-blocking: They allow the browser to continue parsing the HTML document while downloading the scripts, preventing them from blocking the page rendering.
+Improve performance: This non-blocking nature can lead to faster page load times and a smoother user experience.
+Differences:
+
+async:
+
+Execution order: Asynchronously executed as soon as it's downloaded, regardless of order in the HTML. This means even scripts included later can run before earlier ones.
+Use case: Best for independent scripts like analytics or ads, where order doesn't matter.
+defer:
+
+Execution order: Defers execution until all other scripts and HTML parsing are complete. Scripts are executed in the order they appear in the HTML.
+Use case: Ideal for dependent scripts, like libraries or UI enhancements, where order matters and they rely on previously loaded scripts.
+Here's an analogy:
+
+Think of scripts as guests arriving at a party.
+
+async: Guests can enter as soon as they arrive, mingle freely, and even leave before others.
+defer: Guests wait at the door until all other guests arrive and the host welcomes them in one by one.
+Choosing between them:
+
+Use async for independent scripts that don't rely on others.
+Use defer for dependent scripts that need to run after others.
+In doubt, defer is generally safer, especially for complex pages with many interconnected scripts.
+Bonus: Use both! You can combine async and defer on different scripts for optimal performance based on their dependencies.
+
